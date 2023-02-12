@@ -1,0 +1,1 @@
+export const profileInfoFromFile = { name: "Eduardo Souto dos Santos", imageUrl: "assets/history-1/eu.jpg", nickName: "Edu"}
