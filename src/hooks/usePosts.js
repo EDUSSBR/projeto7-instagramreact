@@ -7,7 +7,7 @@ export function usePosts() {
         setPosts(curr => {
             return curr.map(post => {
                 if (post.id === postID && post.isLiked === false) {
-                    return { ...post, postLikes: post.postLikes += 1, isLiked: true }
+                    return { ...post, postLikes: post.postLikes += 1, isLiked: true, addClass:true }
                 } else if (post.id === postID && post.isLiked === true) {
                     return { ...post, postLikes: post.postLikes -= 1, isLiked: false, addClass:false }
                 }
