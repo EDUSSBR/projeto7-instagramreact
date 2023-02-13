@@ -1,6 +1,10 @@
 import { Comment } from "./Comment";
 import { LikeBar } from "./LikeBar";
 export function Post({ toggleLikedPosts, isBookMarked, isLiked, addHeartClass, addLikeToPost, toggleIsBookMarked, postProfileName, postProfileImageUrl, postLikes, postContent: { isVideo, url }, postComments, userProfileName, userProfileImg }) {
+    function stopDefaultAndAddLikeToPost(e){
+        e.preventDefault()
+        addLikeToPost()
+    }
     return (
         <>
             <div className="direct-top-bar">
@@ -11,11 +15,11 @@ export function Post({ toggleLikedPosts, isBookMarked, isLiked, addHeartClass, a
                 <ion-icon ios="ellipsis-horizontal-outline" md="ellipsis-horizontal-outline"></ion-icon>
                 {/* <ion-icon name="ellipsis-horizontal-outline"></ion-icon> */}
             </div>
-            {isVideo === true ? (<video width="100%" height="auto" autoPlay muted controls>
+            {isVideo === true ? (<div><video onDoubleClick={stopDefaultAndAddLikeToPost} width="100%" height="auto" autoPlay muted controls>
                 <source src={`${url}.mp4`} type="video/mp4" />
                 <source src={`${url}.ogg`} type="video/ogg" />
                 Your browser does not support the video tag.
-            </video>) : (<div style={{display:'block', width:'100%', position:'relative'}}><img data-test="post-image" onDoubleClick={addLikeToPost} src={url} alt="" /> { addHeartClass && <span className="turnWhite" ><ion-icon name="heart"></ion-icon></span>}
+            </video> {addHeartClass && <span className="turnWhite" ><ion-icon name="heart"></ion-icon></span>} </div>) : (<div style={{display:'block', width:'100%', position:'relative'}}><img data-test="post-image" onDoubleClick={addLikeToPost} src={url} alt="" /> { addHeartClass && <span className="turnWhite" ><ion-icon name="heart"></ion-icon></span>}
           </div>)}
             {/* className={addHeartClass===true ? "heart" : ""} */}
              <div className="bottom-bar">
