@@ -4,7 +4,7 @@ export function LikeBar({ mainLikeFoto, mainLikeName,  postLikes}) {
             <img src={mainLikeFoto} alt="mainLikeName" />
             <p>
                 Curtido por <strong>{mainLikeName}</strong> e
-                <strong > outras <span data-test="likes-number">{postLikes-1}</span> pessoas</strong>
+                <strong > outras <span data-test="likes-number">{postLikes}</span> pessoas</strong>
             </p>
         </div>
     )
