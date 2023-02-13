@@ -28,7 +28,6 @@ export function usePosts() {
         })
     }
     function addLikeToPost(postID) {
-        console.log("renderizou dentro de addLikeToPost")
          setPosts(curr => {
             return curr.map(post => {
                 if (post.id === postID && post.isLiked === false) {
