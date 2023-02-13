@@ -1,4 +1,5 @@
-export const posts = [{
+export const posts = [
+    {
     id:1,
     postProfileName: "Eduardo S. Santos",
     postProfileImageUrl: "assets/history-1/eu.jpg",
@@ -140,7 +141,8 @@ export const posts = [{
         commentText: 'Esse "Oi Mateus" me fez fechar todos os programas devoice q estavam aberto kkk',
         commentLikes: 53
     }]
-}, {
+}, 
+{
     id:2,
     postProfileName: "SunsetGuy",
     postProfileImageUrl: "assets/history-1/profile-7.jpg",
