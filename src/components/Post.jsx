@@ -15,7 +15,7 @@ export function Post({ toggleLikedPosts, isBookMarked, isLiked, addHeartClass, a
                 <ion-icon ios="ellipsis-horizontal-outline" md="ellipsis-horizontal-outline"></ion-icon>
                 {/* <ion-icon name="ellipsis-horizontal-outline"></ion-icon> */}
             </div>
-            {isVideo === true ? (<div onDoubleClick={(e)=>stopDefaultAndAddLikeToPost(e)}><video  width="100%" height="auto" autoPlay muted controls=''>
+            {isVideo === true ? (<div data-test="post-image" onDoubleClick={(e)=>stopDefaultAndAddLikeToPost(e)}><video  width="100%" height="auto" autoPlay muted controls=''>
                 <source src={`${url}.mp4`} type="video/mp4" />
                 <source src={`${url}.ogg`} type="video/ogg" />
                 Your browser does not support the video tag.
