@@ -1,5 +1,5 @@
 import { Post } from './Post'
-import { usePosts } from '../hooks/usePosts'
+import { usePosts } from './../hooks/usePosts'
 export function Posts({ profileInfo }) {
     const {posts, toggleIsLiked, addLikeToPost, toggleIsBookMarked} = usePosts()
     return (

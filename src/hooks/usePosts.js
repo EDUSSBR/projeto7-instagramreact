@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { posts as fetchedPosts } from '../post'
+import { posts as fetchedPosts } from './../post'
 export function usePosts() {
     const [posts, setPosts] = useState(() => (fetchedPosts.map(post => ({ ...post, isLiked: false, isBookMarked: false, addClass:false }))))
     function toggleIsLiked(postID) {
